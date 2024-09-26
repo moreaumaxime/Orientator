@@ -5,7 +5,23 @@
 .text-title
 {
     font-family: 'Courier', sans-serif;
-    font-size: 50px;
+    font-size: 36px;
     padding: 40px 0px;
     text-align: center;
+}
+.text-title2
+{
+    font-family: 'Courier', sans-serif;
+    font-size: 24px;
+}
+.text
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+}
+.footer-text
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
 }
