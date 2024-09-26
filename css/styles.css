@@ -1,8 +1,6 @@
 body 
 {
-    background-color: #3d60db;
-    margin: 0;
-    padding: 0;
+    background: url(../images/bg.png);
 }
 .site
 {
@@ -21,16 +19,18 @@ body
 {
     font-family: 'Courier', sans-serif;
     font-size: 24px;
+    color: #ffa500;
+    background-color: black;
 }
 .text
 {
     font-family: 'Arial', sans-serif;
-    font-size: 11px;
+    font-size: 15px;
 }
 .footer-text
 {
     font-family: 'Arial', sans-serif;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: bold;
 }
 .primary-color
@@ -45,6 +45,15 @@ body
 {
     color: #ffffff;
 }
+
+
+.site
+{
+    font-family: 'Arial', sans-serif;
+    background-color: gray;
+}
+
+
 
 /* mise en forme pour la barre navigateur*/
 nav{
@@ -62,7 +71,7 @@ li{
     letter-spacing: 3px;
     display: inline-block;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     text-transform: uppercase;
     transition: color 0.5s, background-color 0.5s, transform 0.5s;
 }
