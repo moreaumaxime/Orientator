@@ -17,31 +17,22 @@
 
     <body> 
         <?php include 'navbar.php'; ?>
-
-        <div class="container site">
-            <h2 class="text-title2">Description</h2>
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="text-title2">Branche</h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 class="text-slogan">Slogan</h2>
+            </div>
         </div>
-        <div class="container site">
-        <h2 class="text-title2">Formations</h2>
-
-
+        <div class="row">
+            <div class="col-sm">col-sm</div>
+            <div class="col-sm">col-sm</div>
+            <div class="col-sm">col-sm</div>
         </div>
-        <div class="container site">
-        <h2 class="text-title2">Entreprises</h2>
-
-
-        </div>
-        <div class="container site">
-        <h2 class="text-title2">Métiers</h2>
-
-
-        </div>
-        <div class="container site">
-        <h2 class="text-title2">Autres ressources</h2>
-
-
-        </div>
+    </div>
+</div>
+  
     </body>
 </html>
