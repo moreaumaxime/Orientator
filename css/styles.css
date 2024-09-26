@@ -37,3 +37,12 @@
 {
     color: #ffffff;
 }
+/* display options */
+.inline-block
+{
+    display: inline-block;
+}
+.block
+{
+    display: block;
+}

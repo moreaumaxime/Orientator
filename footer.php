@@ -7,8 +7,3 @@
         <li>propriétaire: John Doe</li>
     </ul>
 </div>
-
-
-
-</body>
-</html>
