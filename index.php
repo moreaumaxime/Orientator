@@ -19,8 +19,9 @@
         <?php include 'navbar.php'; ?>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6" back>
                 <h2 class="text-title2">Branche</h2>
+                <u class="text">Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum dimicationum curulium eventu pendentem. haec similiaque memorabile nihil vel serium agi Romae permittunt. ergo redeundum ad textum.Quare hoc quidem praeceptum, cuiuscumque est, ad tollendam amicitiam valet; illud potius praecipiendum fuit, ut eam diligentiam adhiberemus in amicitiis comparandis, ut ne quando amare inciperemus eum, quem aliquando odisse possemus. Quin etiam si minus felices in diligendo fuissemus, ferendum id Scipio potius quam inimicitiarum tempus cogitandum putabat.</u>
             </div>
             <div class="col-sm-6">
                 <h2 class="text-slogan">Slogan</h2>
