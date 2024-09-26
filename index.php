@@ -21,6 +21,7 @@
         <div class="container site">
             <h2 class="text-title2">Description</h2>
 
+            <class="text">Victus universis caro ferina est lactisque abundans copia qua sustentantur, et herbae multiplices et siquae alites capi per aucupium possint, et plerosque mos vidimus frumenti usum et vini penitus ignorantes.</class>
 
         </div>
         <div class="container site">
