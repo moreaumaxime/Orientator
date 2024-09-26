@@ -80,3 +80,13 @@ li:hover .underline{
     background-color: #ff0000;
     height: 3px;
 }
+
+/* display options */
+.inline-block
+{
+    display: inline-block;
+}
+.block
+{
+    display: block;
+}
