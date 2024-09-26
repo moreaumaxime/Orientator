@@ -1,0 +1,78 @@
+CREATE DATABASE IF NOT EXISTS Orientator;
+DROP DATABASE Orientator;
+CREATE DATABASE Orientator;
+
+
+USE Orientator;
+CREATE TABLE Images(
+ImageID INT AUTO_INCREMENT,
+ImageEmplacement VARCHAR(50) NOT NULL,
+PRIMARY KEY(ImageID),
+UNIQUE(ImageEmplacement)
+);
+
+CREATE TABLE Utilisateur(
+UtilisateurID INT AUTO_INCREMENT,
+UtilisateurEmail VARCHAR(100),
+UtilisateurHash CHAR(64),
+UtilisateurUsername VARCHAR(50),
+PRIMARY KEY(UtilisateurID)
+);
+
+CREATE TABLE Resultats(
+ResultatsID INT AUTO_INCREMENT,
+UtilisateurID INT NOT NULL,
+PRIMARY KEY(ResultatsID),
+FOREIGN KEY(UtilisateurID) REFERENCES Utilisateur(UtilisateurID)
+);
+
+CREATE TABLE Filière(
+FiliereID INT AUTO_INCREMENT,
+FiliereNom VARCHAR(60),
+FiliereDescription VARCHAR(400),
+FiliereSlogan VARCHAR(60),
+ImageID INT NOT NULL,
+PRIMARY KEY(FiliereID),
+FOREIGN KEY(ImageID) REFERENCES Images(ImageID)
+);
+
+CREATE TABLE FiliereFormation(
+FormationID INT AUTO_INCREMENT,
+FormationNom VARCHAR(70),
+FormationDescription VARCHAR(400),
+FiliereID INT NOT NULL,
+PRIMARY KEY(FormationID),
+FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID)
+);
+
+CREATE TABLE Entreprises(
+EntreprisesID INT AUTO_INCREMENT,
+ImageID INT NOT NULL,
+PRIMARY KEY(EntreprisesID),
+FOREIGN KEY(ImageID) REFERENCES Images(ImageID)
+);
+
+CREATE TABLE Emploi(
+EmploiID INT AUTO_INCREMENT,
+EmploiDescription VARCHAR(400),
+FiliereID INT NOT NULL,
+PRIMARY KEY(EmploiID),
+FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID)
+ON DELETE CASCADE
+);
+
+CREATE TABLE Asso_3(
+FiliereID INT NOT NULL,
+EntreprisesID INT NOT NULL,
+PRIMARY KEY(FiliereID, EntreprisesID),
+FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID) ON DELETE CASCADE,
+FOREIGN KEY(EntreprisesID) REFERENCES Entreprises(EntreprisesID) ON DELETE CASCADE
+);
+
+CREATE TABLE ImagesArticleFiliere(
+FiliereID INT NOT NULL,
+ImageID INT NOT NULL,
+PRIMARY KEY(FiliereID, ImageID),
+FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID) ON DELETE CASCADE,
+FOREIGN KEY(ImageID) REFERENCES Images(ImageID) ON DELETE CASCADE
+);
