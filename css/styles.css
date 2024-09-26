@@ -1,3 +1,9 @@
+body 
+{
+    background-color: #3d60db;
+    margin: 0;
+    padding: 0;
+}
 .site
 {
     font-family: 'Holtwood One SC', sans-serif;
@@ -5,9 +11,11 @@
 .text-title
 {
     font-family: 'Courier', sans-serif;
-    font-size: 36px;
+    color: #ffffff;
+    font-style: italic;
+    font-size: 100px;
+    letter-spacing: 5px;
     padding: 40px 0px;
-    text-align: center;
 }
 .text-title2
 {
@@ -36,4 +44,39 @@
 .tertiary-color
 {
     color: #ffffff;
+}
+
+/* mise en forme pour la barre navigateur*/
+nav{
+    background: #fff;
+    border: 1px solid rgb(156, 156, 156);
+    border-bottom-width: 10px;
+}
+ul{
+    display: inline-block;
+}
+li{
+    font-family: Courier;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    transition: color 0.5s, background-color 0.5s, transform 0.5s;
+}
+li .underline{
+    height: 4px;
+    margin-top: 10px;
+}
+li:hover{
+    background-color: rgb(156, 156, 156);
+    border-radius: 5px;
+    color: #ff0000;
+    transform: scale(1.05);
+}
+li:hover .underline{
+    background-color: #ff0000;
+    height: 3px;
 }
