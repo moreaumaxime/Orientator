@@ -11,7 +11,6 @@
 
 <body>
 
-<?php require("barre.php") ?>
 <!-- premiere ligne de contenu -->
 <div class= "inline-block">
     <div>
