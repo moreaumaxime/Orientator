@@ -18,9 +18,17 @@ body
 .text-title2
 {
     font-family: 'Courier', sans-serif;
-    font-size: 24px;
+    font-size: 50px;
     color: #ffa500;
     background-color: black;
+}
+.text-slogan
+{
+    font-family: 'Courier', sans-serif;
+    font-size: 50px;
+    color: black;
+    align-content: center;
+    background-color: white;
 }
 .text
 {
@@ -52,6 +60,13 @@ body
     font-family: 'Arial', sans-serif;
     background-color: gray;
 }
+
+.container{
+    width: 100%;
+    padding: 10px;
+}
+
+
 
 
 
