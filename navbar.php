@@ -7,28 +7,28 @@
 <div align="center">
     <h1 class="text-title">Orientator</h1>
     <nav>
-        <ul>
-            <li>
+        <ul class="ul-nav">
+            <li class="il-nav">
                 <i class="fa fa-home" aria-hidden="true"></i> 
                 Accueil
                 <div class="underline"></div>
             </li>
-            <li>
+            <li class="il-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
                 Branches 1
                 <div class="underline"></div>
             </li>
-            <li>
+            <li class="il-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
                 Branches 2
                 <div class="underline"></div>
             </li>
-            <li>
+            <li class="il-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
                 Branches 3
                 <div class="underline"></div>
             </li>
-            <li>
+            <li class="il-nav">
                 <i class="fa fa-info-circle" aria-hidden="true"></i> 
                 Questionnaire
                 <div class="underline"></div>
