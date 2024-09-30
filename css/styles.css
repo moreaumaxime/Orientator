@@ -28,7 +28,6 @@ body
     font-size: 50px;
     color: black;
     align-content: center;
-    background-color: white;
 }
 .text
 {
@@ -80,10 +79,10 @@ nav{
     border: 1px solid rgb(156, 156, 156);
     border-bottom-width: 10px;
 }
-ul{
+.ul-nav{
     display: inline-block;
 }
-li{
+.li-nav{
     font-family: Courier;
     font-weight: bold;
     font-size: 20px;
@@ -101,11 +100,11 @@ li .underline{
 li:hover{
     background-color: rgb(156, 156, 156);
     border-radius: 5px;
-    color: #ff0000;
+    color: #ffa500;
     transform: scale(1.05);
 }
 li:hover .underline{
-    background-color: #ff0000;
+    background-color: #ffa500;
     height: 3px;
 }
 
