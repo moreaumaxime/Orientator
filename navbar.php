@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style2.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -9,23 +9,23 @@
     <nav>
         <ul class="ul-nav">
             <li class="il-nav">
-                <i class="fa fa-home" aria-hidden="true"></i> 
-                Accueil
+               <a href="Accueil.php"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
+                <div class="underline"></div>
+            </li>
+
+            <li class="il-nav">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i> 
+                Branche 1
                 <div class="underline"></div>
             </li>
             <li class="il-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
-                Branches 1
+                Branche 2
                 <div class="underline"></div>
             </li>
             <li class="il-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
-                Branches 2
-                <div class="underline"></div>
-            </li>
-            <li class="il-nav">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> 
-                Branches 3
+                Branche 3
                 <div class="underline"></div>
             </li>
             <li class="il-nav">
