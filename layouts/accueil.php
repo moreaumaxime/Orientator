@@ -24,7 +24,7 @@
 
 <!-- lignes pour chaque branche -->
 <div>
-    <?php foreach($branches as list($title, $desc, $img)) {
+    <?php foreach($branches as list($title, $slogan, $desc, $img)) {
     ?>
         <div class="branche">
             <div style="background-image: url('<?= $img ?>');">
