@@ -25,8 +25,4 @@ if (isset($_GET['page']) && $_GET['page'] !== '') {
 }
 
 
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> parent of fa1f6e3 (Merge branch 'main' of https://github.com/moreaumaxime/Orientator)
