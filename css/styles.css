@@ -1,6 +1,7 @@
 body 
 {
-    background: url(../images/bg.png);
+    background-color: #3d60db;
+    /*background: url(../images/bg.png);*/
 }
 .site
 {
@@ -28,12 +29,12 @@ body
     font-size: 50px;
     color: black;
     align-content: center;
-    background-color: white;
 }
 .text
 {
     font-family: 'Arial', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    background-color: white;
 }
 .footer-text
 {
@@ -54,6 +55,9 @@ body
     color: #ffffff;
 }
 
+.col-sm-6{
+    background-color: white;
+}
 
 .site
 {
@@ -76,10 +80,10 @@ nav{
     border: 1px solid rgb(156, 156, 156);
     border-bottom-width: 10px;
 }
-ul{
+.ul-nav{
     display: inline-block;
 }
-li{
+.li-nav{
     font-family: Courier;
     font-weight: bold;
     font-size: 20px;
@@ -90,18 +94,18 @@ li{
     text-transform: uppercase;
     transition: color 0.5s, background-color 0.5s, transform 0.5s;
 }
-li .underline{
+li.li-nav .underline{
     height: 4px;
     margin-top: 10px;
 }
-li:hover{
+li.li-nav:hover{
     background-color: rgb(156, 156, 156);
     border-radius: 5px;
-    color: #ff0000;
+    color: #ffa500;
     transform: scale(1.05);
 }
-li:hover .underline{
-    background-color: #ff0000;
+li.li-nav:hover .underline{
+    background-color: #ffa500;
     height: 3px;
 }
 
@@ -113,4 +117,21 @@ li:hover .underline{
 .block
 {
     display: block;
+}
+
+/* mise en forme pour la communication*/
+footer{
+    background: #fff;
+    border: 1px solid rgb(156, 156, 156);
+    border-bottom-width: 10px;
+}
+.ul-foot{
+    display: inline-block;
+}
+.li-foot{
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-align: center;
 }

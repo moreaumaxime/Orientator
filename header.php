@@ -1,7 +1,7 @@
 <?php
 // Variables dynamiques pour le titre, les stylesheets et les scripts
-$title = isset($title) ? $title : "Titre par défaut";
-$stylesheets = isset($stylesheets) ? $stylesheets : ["style.css"];
+$title = isset($title) ? $title : "Orientator";
+$stylesheets = isset($stylesheets) ? $stylesheets : ["css/styles.css"];
 $scripts = isset($scripts) ? $scripts : ["https://code.jquery.com/jquery-3.6.0.min.js"];
 ?>
 
@@ -22,6 +22,5 @@ $scripts = isset($scripts) ? $scripts : ["https://code.jquery.com/jquery-3.6.0.m
         <script src="<?= htmlspecialchars($script) ?>"></script>
     <?php endforeach; ?>
 </head>
-<body>
-    <!-- Inclusion de la barre de navigation -->
-    <?php include 'navbar.php'; ?>
+
+<?php require("navbar.php") ?> 
