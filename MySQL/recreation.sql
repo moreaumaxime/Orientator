@@ -31,12 +31,12 @@ FiliereID INT AUTO_INCREMENT,
 FiliereNom VARCHAR(60),
 FiliereDescription VARCHAR(400),
 FiliereSlogan VARCHAR(60),
-ImageID INT NOT NULL,
+ImageID INT,
 PRIMARY KEY(FiliereID),
 FOREIGN KEY(ImageID) REFERENCES Images(ImageID)
 );
 
-CREATE TABLE FiliereFormation(
+CREATE TABLE Formation(
 FormationID INT AUTO_INCREMENT,
 FormationNom VARCHAR(70),
 FormationDescription VARCHAR(400),
@@ -47,9 +47,11 @@ FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID)
 
 CREATE TABLE Entreprises(
 EntreprisesID INT AUTO_INCREMENT,
+FiliereID INT NOT NULL,
 ImageID INT NOT NULL,
 PRIMARY KEY(EntreprisesID),
-FOREIGN KEY(ImageID) REFERENCES Images(ImageID)
+FOREIGN KEY(ImageID) REFERENCES Images(ImageID),
+FOREIGN KEY(FiliereID) REFERENCES Filiere(FiliereID) ON DELETE CASCADE
 );
 
 CREATE TABLE Emploi(
@@ -57,17 +59,9 @@ EmploiID INT AUTO_INCREMENT,
 EmploiDescription VARCHAR(400),
 FiliereID INT NOT NULL,
 PRIMARY KEY(EmploiID),
-FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID)
-ON DELETE CASCADE
+FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID) ON DELETE CASCADE
 );
 
-CREATE TABLE Asso_3(
-FiliereID INT NOT NULL,
-EntreprisesID INT NOT NULL,
-PRIMARY KEY(FiliereID, EntreprisesID),
-FOREIGN KEY(FiliereID) REFERENCES Filière(FiliereID) ON DELETE CASCADE,
-FOREIGN KEY(EntreprisesID) REFERENCES Entreprises(EntreprisesID) ON DELETE CASCADE
-);
 
 CREATE TABLE ImagesArticleFiliere(
 FiliereID INT NOT NULL,

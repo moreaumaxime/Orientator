@@ -1,4 +1,4 @@
-<?php require("header.php") ?>
+
 
 
 <html>
@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         <title>Accueil</title>
         <link rel="icon" type="png" href="/images/OrientatorLogo.png">
-        <link href="css/styles.css" rel="stylesheet" />
+       <!-- <link href="css/styles.css" rel="stylesheet" /> -->
     </head>
 
 <body>
