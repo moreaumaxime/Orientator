@@ -1,0 +1,110 @@
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.case {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Case profil (en haut à gauche) */
+.profile {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Conteneur de gauche pour les boutons */
+.profile-left {
+    display: flex;
+    flex-direction: column;  
+    gap: 10px;
+    align-items: center;  
+    justify-content: center;  
+}
+
+/* Conteneur de droite pour la photo de profil */
+.profile-right {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    margin-left: 130px;  
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;  
+    object-fit: cover;  
+    border: 2px solid #ccc;
+}
+
+/* Boutons dans la partie gauche */
+.btn-result, .btn-logout {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;  
+    text-align: center;  
+}
+
+.btn-logout {
+    background-color: #FF6347;
+}
+
+.btn-result:hover, .btn-logout:hover {
+    background-color: #0056b3;
+}
+
+.btn-logout:hover {
+    background-color: #d9534f;
+}
+
+
+/* Case test (en haut à droite) */
+.test {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.btn-test {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-test:hover {
+    background-color: #218838;
+}
+
+/* Case filière (en bas à gauche) */
+.filiere {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+/* Case description filière (en bas à droite) */
+.description {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}

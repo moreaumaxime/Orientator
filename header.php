@@ -1,6 +1,6 @@
 <?php
 // Variables dynamiques pour le titre, les stylesheets et les scripts
-$title = isset($title) ? $title : "Titre par défaut";
+$title = isset($title) ? $title : "Orientator";
 $stylesheets = isset($stylesheets) ? $stylesheets : ["css/styles.css"];
 $scripts = isset($scripts) ? $scripts : ["https://code.jquery.com/jquery-3.6.0.min.js"];
 ?>
