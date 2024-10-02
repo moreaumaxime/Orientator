@@ -1,0 +1,35 @@
+/* Assurez-vous que la liste soit en ligne avec Flexbox */
+ul.ul-nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0;
+    margin: 0;
+}
+
+/* Style des éléments de la liste */
+li.il-nav {
+    margin: 0 15px; /* Espace entre les éléments */
+    font-family: 'Open Sans', sans-serif; /* Assurez-vous que la police est appliquée */
+    font-size: 18px; /* Ajustez selon vos besoins */
+    display: flex;
+    align-items: center; /* Aligner verticalement les éléments */
+    cursor: pointer; /* Pour indiquer que c'est cliquable */
+}
+
+/* Style pour les icônes */
+.il-nav i {
+    margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+
+/* Optionnel: pour souligner les liens au survol */
+li.il-nav:hover .underline {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.underline {
+    height: 2px;
+    width: 0;
+    background-color: #000; /* Vous pouvez ajuster la couleur ici */
+}
