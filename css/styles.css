@@ -94,17 +94,17 @@ nav{
     text-transform: uppercase;
     transition: color 0.5s, background-color 0.5s, transform 0.5s;
 }
-li .underline{
+li.li-nav .underline{
     height: 4px;
     margin-top: 10px;
 }
-li:hover{
+li.li-nav:hover{
     background-color: rgb(156, 156, 156);
     border-radius: 5px;
     color: #ffa500;
     transform: scale(1.05);
 }
-li:hover .underline{
+li.li-nav:hover .underline{
     background-color: #ffa500;
     height: 3px;
 }
@@ -124,4 +124,14 @@ footer{
     background: #fff;
     border: 1px solid rgb(156, 156, 156);
     border-bottom-width: 10px;
+}
+.ul-foot{
+    display: inline-block;
+}
+.li-foot{
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-align: center;
 }
