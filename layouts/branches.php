@@ -13,6 +13,14 @@
 <div class="container">    
     <div class="row">
         <div class="col-sm-6" back>
+        <?php 
+            echo '
+            <h2 class="text-title2">';
+            
+            echo '
+            </h2>';
+        
+    ?>
             <h2 class="text-title2">Branche</h2>
             <u class="text"></u>
         </div>
