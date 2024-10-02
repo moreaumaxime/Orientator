@@ -19,11 +19,16 @@
                 <i class="fa fa-home" aria-hidden="true"></i> 
                 Accueil
                 <div class="underline"></div>
+                
             </li>
             <li class="li-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
                 Branches 1
                 <div class="underline"></div>
+                <?php
+                    header('Location: http://localhost/Orientator/branches.php');
+                    exit();
+                ?>
             </li>
             <li class="li-nav">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> 
