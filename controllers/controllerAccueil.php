@@ -9,7 +9,8 @@ function accueil(){
 
 
     ];
-    $buttonlink = ""
+    $buttonlink = "";
+    $loginCard="";
 
     include("layouts/accueil.php");
 }
