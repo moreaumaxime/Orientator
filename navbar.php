@@ -16,28 +16,23 @@
     <nav>
         <ul class="ul-nav">
             <li class="il-nav">
-               <a href="Accueil.php"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
-                <div class="underline"></div>
-                
-            </li>
-            <li class="li-nav">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> 
-                Branches 1
+                <a href="Accueil.php"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> 
-                Branches 2
+                <a href="Accueil.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 1</a>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> 
-                Branches 3
+                <a href="Accueil.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 2</a>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
-                <i class="fa fa-info-circle" aria-hidden="true"></i> 
-                Questionnaire
+                <a href="Accueil.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 3</a>
+                <div class="underline"></div>
+            </li>
+            <li class="li-nav">
+                <a href="Questionnaire.php"><i class="fa fa-info-circle" aria-hidden="true"></i> Questionnaire</a>
                 <div class="underline"></div>
             </li>
         </ul>

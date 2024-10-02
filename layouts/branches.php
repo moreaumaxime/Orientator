@@ -9,6 +9,7 @@
 
 <body>
 
+
 <div class="container">    
     <div class="row">
         <div class="col-sm-6" back>
@@ -17,6 +18,24 @@
         </div>
         <div class="col-sm-6">
             <h2 class="text-slogan">Slogan</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" back>
+            <h2 class="text-title2">Description</h2>
+            <u class="text"></u>
+        </div>
+        <div class="col-sm-6">
+            <h2 class="text-slogan">Entreprises</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" back>
+            <h2 class="text-title2">Emplois</h2>
+            <u class="text"></u>
+        </div>
+        <div class="col-sm-6">
+            <h2 class="text-slogan">Autres ressources</h2>
         </div>
     </div>
 </div>
