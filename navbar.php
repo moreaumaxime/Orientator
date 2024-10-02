@@ -19,16 +19,15 @@
                 <a href="Accueil.php"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
                 <div class="underline"></div>
             </li>
-            <li class="li-nav">
-                <a href="Accueil.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 1</a>
-                <div class="underline"></div>
-            </li>
-            <li class="li-nav">
-                <a href="Accueil.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 2</a>
-                <div class="underline"></div>
-            </li>
-            <li class="li-nav">
-                <a href="Accueil.php"><i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 3</a>
+            
+            <li class="li-nav"> 
+                <?php  
+                echo '
+                <a href="Accueil.php">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 1
+                </a>
+                '; 
+                ?>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
