@@ -13,12 +13,6 @@
 <div class="container">
     <!-- premiere ligne de contenu -->
 
-
-
-
-
-
-
     
     <div class="row">
         <div class="col-sm-6" back>
