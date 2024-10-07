@@ -15,23 +15,31 @@
     <h1 class="text-title">Orientator</h1>
     <nav>
         <ul class="ul-nav">
-            <li class="il-nav">
-                <a href="Accueil.php"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
+            <li class="li-nav">
+            <?php
+                // Définir l'URL du lien
+
+                $url = "layouts/accueil.php";
+                // Afficher le lien sans que ça ressemble à un lien
+                echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Accueil</a>';
+            ?>
+                <i class="fa fa-home" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
-            
             <li class="li-nav"> 
                 <?php  
-                echo '
-                <a href="Accueil.php">
-                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Branche 1
-                </a>
-                '; 
+                $url = "Accueil.php";
+                echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Branche 1</a>';
                 ?>
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
-                <a href="Questionnaire.php"><i class="fa fa-info-circle" aria-hidden="true"></i> Questionnaire</a>
+            <?php
+                $url = "Accueil.php";
+                echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Questionnaire</a>';
+            ?>
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
         </ul>
