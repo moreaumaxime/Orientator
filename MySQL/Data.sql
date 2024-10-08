@@ -1,9 +1,6 @@
 USE Orientator;
 
 
-
-
-
 INSERT INTO Images (ImageID, ImageEmplacement) VALUES 
     (1,"OrientatorLogo.png"),
     (2,"bg.png");
@@ -28,13 +25,13 @@ INSERT INTO Entreprises (EntreprisesID, EntrepriseNom, ImageID, FiliereID) VALUE
     (8,"Software AG",1,5),
     (9,"Samsung",1,5);
 
-ALTER TABLE Entreprise AUTO_INCREMENT = 10;
+ALTER TABLE Entreprises AUTO_INCREMENT = 10;
 
-INSERT INTO Utilisateurs (UtilisateurID, UtilisateurUsername, UtilisateurEmail, UtilisateurHash ) VALUES
+INSERT INTO Utilisateur (UtilisateurID, UtilisateurUsername, UtilisateurEmail, UtilisateurHash ) VALUES
     (1,"User","User@gmail.com","04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb"),/* password : user*/
     (2,"User2","User2@gmail.com","ca22d1343854b37baadc9b6dfa379e62e8dc4409cbef0671121c7e6eb9ea9ccd");/* password : 3il */
 
-ALTER TABLE AUTO_INCREMENT = 3;
+ALTER TABLE Utilisateur AUTO_INCREMENT = 3;
 
 INSERT INTO Emploi (EmploiID, EmploiNom, FiliereID, EmploiDescription) VALUES
     (1,"Directeur de la Sécurité Informatique",1,"C'est le responsable de la sécurité d'un site/d'une entreprise, il est chargé d'établir les risques présents, puis de concevoir les protocoles de sécurité, les politiques de mot de passe, et autres actions necessaires pour mitiger les risques"),
@@ -42,17 +39,17 @@ INSERT INTO Emploi (EmploiID, EmploiNom, FiliereID, EmploiDescription) VALUES
     (3,"Dev web",2,"Le dev web concoit des pages internet, leur apparence, leur fonctionnalités, puis les met en place"),
     (4,"Data Scientist",3,"L'entrainement d'une IA passe d'abord par un bon jeu de données, et ce jeu de données doit etre préparé avec soin. Il faut aussi savoir de quel type de données on a besoin."),
     (5,"Directeur du service informatique",4,"Responsable de l'infrastructure de l'entreprise/du site dont il est chargé, il doit concevoir les differents equipements a mettre en place, leur maintenance, leurs documentations. Il met cela en place avec une equipe de techniciens qu'il dirige."),
-    (6,"Architecte systemes embarqués",5,"Sa résponsabilité est la conception et l'implementation de systemes embarqués. C'est a dire de définir quelles informations seront nécessaires au fonctionnement de l'objet, et comment la traiter pour réaliser efficacement ce que l'objet doit faire. ")
+    (6,"Architecte systemes embarqués",5,"Sa résponsabilité est la conception et l'implementation de systemes embarqués. C'est a dire de définir quelles informations seront nécessaires au fonctionnement de l'objet, et comment la traiter pour réaliser efficacement ce que l'objet doit faire. ");
 
-ALTER TABLE AUTO_INCREMENT = 6;
+ALTER TABLE Emploi AUTO_INCREMENT = 6;
 
 INSERT INTO Formation (FormationID, FiliereID, FormationNom, FormationDescription) VALUES
     (1,1,"Bachelor Cybersécurité","Formation Bac+3 qui offre une spécialisation en alternance a partir de la 2eme année"),
     (2,1,"Master Cryptis","Formation Bac+5 qui offre deux parcours, orientés sur la théorie autour de la cryptologie, et un parcours orienté sur l'aspect technique"),
-    (3),
-    (),
-    (),
-    (),
-    ()
+    (3,2,"Inénieur en informatique","Bac+5 qui offre les compétences necessaires en gestion de projet et les connaissances technologiques requises pour faire du developpement."),
+    (4,3,"Mastère Expert en Intelligence Artificielle","Apprenez a modeliser une Intelligence Artificielle qui parcourt une vaste quantité de données"),
+    (5,4,"Administrateur d'infrastructures sécurisées","Concevoir et mettre en place des systemes qui peuvent évoluer dans le temps et participer a la gestion de leur sécurité"),
+    (6,5,"Licence informatique spécialité robotique de prototypage","Formation Bac+3 ouvrant sur divers metiers de la robotique, notamment en prototypage et en integration robotique.");
 
+ALTER TABLE Formation AUTO_INCREMENT = 7;
 

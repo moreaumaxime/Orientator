@@ -23,7 +23,7 @@ CREATE TABLE Resultats(
 ResultatsID INT AUTO_INCREMENT,
 UtilisateurID INT NOT NULL,
 PRIMARY KEY(ResultatsID),
-FOREIGN KEY(UtilisateurID) REFERENCES Utilisateur(UtilisateurID)
+FOREIGN KEY(UtilisateurID) REFERENCES Utilisateur(UtilisateurID) ON DELETE CASCADE
 );
 
 CREATE TABLE Filiere(
