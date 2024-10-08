@@ -10,7 +10,7 @@
 
 <body>
     <?php 
-    require 'controllers\controllerBranches.php';
+    require_once 'controllers\controllerBranches.php';
     $statement = $db->query('
         SELECT filiere_nom, filière.Slogan, filiere_description, entreprise_nom, entreprise_description, formation_nom, formation_description, emploi_descriptionFROM filière
         LEFT JOIN Asso3 ON filière.ID = Asso3.filiere_id
