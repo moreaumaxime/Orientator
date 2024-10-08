@@ -2,8 +2,8 @@
 
 function accueil(){
 
-    $stylesheets = ["css/styles.css"]
-    $scripts = []
+    $stylesheets = ["css/styles.css"];
+    $scripts = [];
 
 
     // a recuperer dans la bdd

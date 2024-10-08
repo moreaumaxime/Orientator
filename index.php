@@ -10,8 +10,8 @@ if (isset($_GET['page']) && $_GET['page'] !== '') {
 	if ($_GET['page'] === 'accueil') {
     	accueil();
     }
-    if($_GET['page'] === 'branche' && isset($_POST['branche'])){
-        branches($_POST['branche']);
+    if($_GET['page'] === 'branche' && isset($_GET['branche'])){
+        branches($_GET['branche']);
     }
 } else {
     accueil();
