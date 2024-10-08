@@ -1,16 +1,8 @@
 
 
-
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Accueil</title>
-        <link rel="icon" type="png" href="/images/OrientatorLogo.png">
-       <link href="css/styles.css" rel="stylesheet" />
-    </head>
-
-<body>
-
+<?php 
+require_once("header.php")
+?>
 <!-- premiere ligne de contenu -->
 <div class= "inline-block">
     <div>
