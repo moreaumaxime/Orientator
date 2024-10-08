@@ -1,8 +1,9 @@
 
 
-<?php 
-require_once("header.php")
-?>
+<?php require_once("header.php")?>
+
+<?php require("navbar.php") ?> 
+
 <!-- premiere ligne de contenu -->
 <div class= "inline-block">
     <div>
