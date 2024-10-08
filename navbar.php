@@ -18,7 +18,7 @@
             <li class="li-nav">
             <?php
                 // Définir l'URL du lien
-                $url = "layouts/accueil.php";
+                $url = "index.php";
                 // Afficher le lien sans que ça ressemble à un lien
                 echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Accueil</a>';
             ?>
@@ -34,10 +34,18 @@
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
-            <?php
-                $url = "Accueil.php";
-                echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Questionnaire</a>';
-            ?>
+                <?php
+                $url = "accueil.php";
+                ?>
+                <a style="text-decoration: none; color: inherit;">Questionnaire</a>';
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <div class="underline"></div>
+            </li>
+            <li class="li-nav">
+                <?php
+                $url = "index.php";
+                ?>
+                <a style="text-decoration: none; color: inherit;">Résultat</a>';
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
