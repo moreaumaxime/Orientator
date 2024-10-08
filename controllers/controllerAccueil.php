@@ -3,7 +3,7 @@
 function accueil(){
 
     $stylesheets = ["css/styles.css"]
-    $script = []
+    $scripts = []
 
 
     // a recuperer dans la bdd
