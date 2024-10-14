@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enable"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "orientator",
+            "username": "root",
+            "name": "orientator",
+            "password": ""
+        }
+    ],
+    "mssql.connections": []
+}

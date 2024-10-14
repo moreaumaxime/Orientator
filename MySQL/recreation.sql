@@ -20,10 +20,15 @@ PRIMARY KEY(UtilisateurID)
 );
 
 CREATE TABLE Resultats(
-ResultatsID INT AUTO_INCREMENT,
-UtilisateurID INT NOT NULL,
-PRIMARY KEY(ResultatsID),
-FOREIGN KEY(UtilisateurID) REFERENCES Utilisateur(UtilisateurID) ON DELETE CASCADE
+    ResultatsID INT AUTO_INCREMENT,
+    UtilisateurID INT NOT NULL,
+    cybersecurite DECIMAL(5,2),
+    developpement DECIMAL(5,2),
+    IA DECIMAL(5,2),
+    infrastructure DECIMAL(5,2),
+    robotique DECIMAL(5,2),
+    PRIMARY KEY(ResultatsID),
+    FOREIGN KEY(UtilisateurID) REFERENCES Utilisateur(UtilisateurID) ON DELETE CASCADE
 );
 
 CREATE TABLE Filiere(
