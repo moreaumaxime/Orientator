@@ -1,18 +1,53 @@
 <?php
 
-function accueil(){
+// try {
+//     $db = new PDO('mysql:host=localhost;dbname=orientator;charset=utf8', 'root', '');
+// } catch (Exception $e) {
+//     die('Erreur : ' . $e->getMessage());
+// }
 
-    $stylesheets = ["css/styles.css"];
+function getBranches(){
+    try {
+        $db = new PDO('mysql:host=localhost;dbname=orientator;charset=utf8', 'root', '');
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    $stmt = $db->query("
+        SELECT filiereId, filiereNom, filiereDescription, filiereSlogan, ImageID FROM Filiere;
+    ");
+
+    $branches = $stmt->fetchAll();
+
+    return $branches;
+}
+function getBranche($id){
+    try {
+        $db = new PDO('mysql:host=localhost;dbname=orientator;charset=utf8', 'root', '');
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    
+    $stmt = $db->query("
+        SELECT filiereId, filiereNom, filiereDescription, filiereSlogan, ImageID 
+        FROM Filiere
+        WHERE filiereID = ?;
+    ");
+
+    $branches = $stmt->fetchAll([$id]);
+
+    return $branches;
+}
+
+
+
+function accueil(){
+    //head parameters
+    $stylesheets = ["css/styles.css","css/styleAccueil.css"];
     $scripts = [];
 
 
     // a recuperer dans la bdd
-    $branches = [
-        ["Cybersecurité", "la branche des hackers", "Description de la filiere g la flemme c du statique", "images/orientatorLogo.jpg"],
-        ["developpement", "Creez des applications", "", ""]
-
-
-    ];
+    $branches = getBranches();
     $buttonlink = "";
     $loginCard="";
 
