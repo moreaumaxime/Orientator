@@ -102,6 +102,10 @@ button[type = "submit"]:hover {
 .container form label {
     padding: 8px 0;
 }
+p{
+    
+    text-align: center;
+}
 
 
 /* Responsive adjustments */
