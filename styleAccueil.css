@@ -1,0 +1,140 @@
+/* Style de la navbar */
+nav{
+    background: #fff;
+    border: 1px solid rgb(156, 156, 156);
+    border-bottom-width: 10px;
+}
+.ul-nav{
+    display: inline-block;
+}
+.li-nav{
+    font-family: Courier;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    display: inline-block;
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+    transition: color 0.5s, background-color 0.5s, transform 0.5s;
+}
+li.li-nav .underline{
+    height: 4px;
+    margin-top: 10px;
+}
+li.li-nav:hover{
+    background-color: rgb(156, 156, 156);
+    border-radius: 5px;
+    color: #ffa500;
+    transform: scale(1.05);
+}
+li.li-nav:hover .underline{
+    background-color: #ffa500;
+    height: 3px;
+}
+
+/* display options */
+.inline-block
+{
+    display: inline-block;
+}
+.block
+{
+    display: block;
+}
+
+/* Style de la section utilisateur */
+.user-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.user-info .user-section-logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.user-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-buttons .btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Style du bouton Faire le test */
+.test-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.test-section .faire-test {
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.test-section .faire-test:hover {
+    background-color: #555;
+}
+
+/* Style des branches */
+.branches-explanation {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.branches-explanation h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.branch {
+    margin-bottom: 20px;
+}
+
+.branch h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.branch p {
+    color: #555;
+}
+
+/* Style du footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #ddd;
+}
