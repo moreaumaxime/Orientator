@@ -14,7 +14,7 @@ try {
 // }
 
 // Récupérer l'ID de l'utilisateur connecté
-$utilisateurId = $_SESSION['utilisateurId'];
+// $utilisateurId = $_SESSION['utilisateurId'];
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         VALUES (:UtilisateurID, :cybersecurite, :developpement, :IA, :infrastructure, :robotique)
     ");
     $stmt->execute([
-        'UtilisateurID' => $utilisateurId,
+        'UtilisateurID' => 1,
         'cybersecurite' => $scores['cybersecurite'],
         'developpement' => $scores['developpement'],
         'IA' => $scores['IA'],
