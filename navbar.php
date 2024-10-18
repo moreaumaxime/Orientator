@@ -18,23 +18,30 @@
     <nav>
         <ul class="ul-nav">
             <li class="li-nav">
-            <?php
-                // Définir l'URL du lien
+                <?php
                 $url = "index.php";
-                // Afficher le lien sans que ça ressemble à un lien
                 echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Accueil</a>';
-            ?>
+                ?>
                 <i class="fa fa-home" aria-hidden="true"></i>
                 <div class="underline"></div>
-            </li>
-            <li class="li-nav"> 
+            </li> 
                 <?php  
-                $url = "Accueil.php";
-                echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;">Branche 1</a>';
+                $branches = [
+                    ['id' => 1, 'nom' => 'Cybersécurité'],
+                    ['id' => 2, 'nom' => 'Développement'],
+                    ['id' => 3, 'nom' => 'IA'],
+                    ['id' => 4, 'nom' => 'Infrastructure'],
+                    ['id' => 5, 'nom' => 'Robotique/IoT'],
+                ];
+                foreach ($branches as $branch) {
+                    $url = "index.php?page=branche&branche=" . $branch['id'];
+                    echo '<li class="li-nav">';
+                    echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;"> ' . htmlspecialchars($branch['nom']) . ' </a>';
+                    echo '<i class="fa fa-file-text-o" aria-hidden="true"></i>';
+                    echo '<div class="underline"></div>';
+                    echo '</li>';
+                }
                 ?>
-                <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                <div class="underline"></div>
-            </li>
             <li class="li-nav">
                 <?php
                 $url = "quizz.php";
