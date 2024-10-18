@@ -14,7 +14,7 @@ if (!isset($_SESSION['UtilisateurID'])) {
     die('Erreur 401 : Vous devez être connecté pour accéder à cette page.');
 }
 // Récupérer l'ID de l'utilisateur connecté
-$utilisateurId =  $db->prepare("SELECT * FROM `utilisateur` ORDER BY `utilisateur`.`UtilisateurID` ASC") ;
+$utilisateurId =  $_SESSION['UtilisateurID']; // Récupérer l'ID de l'utilisateur connecté
 
 
 // Vérifier si le formulaire est soumis

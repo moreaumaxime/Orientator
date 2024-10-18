@@ -23,7 +23,7 @@ catch (Exception $e) {
             {
                // $email_erreur2 = "Votre adresse E-Mail n'a pas un format valide";
                 //$i++;
-                echo 'Votre adresse E-Mail est au format invalide.'
+                echo 'Votre adresse E-Mail est au format invalide.';
             }  
 
             if($select -> rowcount()>0){
