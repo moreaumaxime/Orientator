@@ -15,3 +15,8 @@
     grid-template-columns: 2fr 1fr;
     min-height: 200px;
 }
+.test-desc{
+    text-align: center;
+    font-weight: bold;
+
+}
