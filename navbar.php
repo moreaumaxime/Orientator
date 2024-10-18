@@ -27,17 +27,17 @@
             </li> 
                 <?php  
                 $branches = [
-                    ['id' => 1, 'nom' => 'Cybersécurité'],
-                    ['id' => 2, 'nom' => 'Développement'],
-                    ['id' => 3, 'nom' => 'IA'],
-                    ['id' => 4, 'nom' => 'Infrastructure'],
-                    ['id' => 5, 'nom' => 'Robotique/IoT'],
+                    ['id' => 1, 'nom' => 'Cybersécurité', 'fa' => 'fa fa-shield'],
+                    ['id' => 2, 'nom' => 'Développement', 'fa' => 'fa fa-desktop'],
+                    ['id' => 3, 'nom' => 'IA', 'fa' => 'fas fa-brain'],
+                    ['id' => 4, 'nom' => 'Infrastructure', 'fa' => 'fa fa-building'],
+                    ['id' => 5, 'nom' => 'Robotique/IoT', 'fa' => 'fas fa-robot'],
                 ];
                 foreach ($branches as $branch) {
                     $url = "index.php?page=branche&branche=" . $branch['id'];
                     echo '<li class="li-nav">';
                     echo '<a href="' . $url . '" style="text-decoration: none; color: inherit;"> ' . htmlspecialchars($branch['nom']) . ' </a>';
-                    echo '<i class="fa fa-file-text-o" aria-hidden="true"></i>';
+                    echo '<i class="' . $branch['fa'] . '" aria-hidden="true"></i>';
                     echo '<div class="underline"></div>';
                     echo '</li>';
                 }
