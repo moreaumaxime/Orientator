@@ -28,8 +28,9 @@ function getBranche($id){
     }
     
     $stmt = $db->query("
-        SELECT filiereId, filiereNom, filiereDescription, filiereSlogan, ImageID 
-        FROM Filiere
+        SELECT f.filiereId, f.filiereNom, f.filiereDescription, f.filiereSlogan, i.ImageEmplacement 
+        FROM Filiere f
+        LEFT JOIN Images i ON f.ImageID = i.ImageID
         WHERE filiereID = ?;
     ");
 

@@ -9,12 +9,12 @@ try {
 }
 
 // Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['utilisateurId'])) {
+if (!isset($_SESSION['UtilisateurID'])) {
     die('Erreur 401 :  Vous devez être connecté pour accéder à cette page.');
 }
 
 // Récupérer l'ID de l'utilisateur connecté
-$utilisateurId = $_SESSION['utilisateurId'];
+$utilisateurId = $_SESSION['UtilisateurID'];
 
 // Récupérer les derniers résultats de l'utilisateur depuis la base de données
 $stmt = $db->prepare("
