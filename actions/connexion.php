@@ -30,8 +30,9 @@ catch (Exception $e) {
 
                 $_SESSION['UtilisateurHash'] = $UtilisateurHash;
                 $_SESSION['UtilisateurEmail'] = $email;
-                header("Location: /index.php");
-                die();
+
+                header("Location: ../index.php");
+                
             }else {
                 echo " Adresse Email ou mot de passe incorrect. ";
             }

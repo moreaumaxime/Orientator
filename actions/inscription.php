@@ -53,18 +53,19 @@ catch (Exception $e) {
              echo'<h1>Inscription terminée</h1>';
              echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['UtilisateurUsername'])).' vous êtes maintenant inscrit sur le forum</p>';
              
-            $query=$bdd->prepare('INSERT INTO utilisateur (UtilisateurEmail, UtilisateurHash, UtilisateurUsername,)
+            $query=$bdd->prepare('INSERT INTO utilisateur (UtilisateurEmail, UtilisateurHash, UtilisateurUsername)
             VALUES (:UtilisateurEmail, :UtilisateurHash, :UtilisateurUsername)');
              $query->bindValue(':UtilisateurEmail', $UtilisateurEmail, PDO::PARAM_STR);
-             $query->bindValue(':UtilisateurHash', $UtilisateurHash, PDO::PARAM_INT);
+             $query->bindValue(':UtilisateurHash', $UtilisateurHash, PDO::PARAM_STR);
              $query->bindValue(':UtilisateurUsername', $UtilisateurUsername, PDO::PARAM_STR);
              $query->execute();
              //Et on définit les variables de sessions
                  $_SESSION['UtilisateurEmail'] = $UtilisateurEmail;
                  $_SESSION['UtilisateurHash'] = $UtilisateurHash;
                  $query->CloseCursor();
-                 header("Location: /connexion.html");
-                die();
+
+                 header("Location: ../layouts/connexion.html");
+                
                  //$_SESSION['level'] = 2;
              }
              else
