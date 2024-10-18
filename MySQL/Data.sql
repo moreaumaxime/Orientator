@@ -39,7 +39,7 @@ CREATE TABLE Filiere(
     FiliereID INT AUTO_INCREMENT,
     FiliereNom VARCHAR(60),
     FiliereDescription VARCHAR(400),
-    FiliereSlogan VARCHAR(60),
+    FiliereSlogan VARCHAR(150),
     ImageID INT,
     PRIMARY KEY(FiliereID),
     FOREIGN KEY(ImageID) REFERENCES Images(ImageID) ON DELETE SET NULL
@@ -82,20 +82,22 @@ CREATE TABLE ImagesArticleFiliere(
 );
 
 
-
-
 INSERT INTO Images (ImageID, ImageEmplacement) VALUES 
     (1,"OrientatorLogo.png"),
     (2,"bg.png");
+    (3,"Images/bannerSecu.jpg");
+    (4,"Images/bannerIoT.png");
+    (5,"Images/bannerIA.png");
+
 ALTER TABLE Images AUTO_INCREMENT = 3;
 
 
 INSERT INTO Filiere (FiliereID, FiliereNom, FiliereSlogan, FiliereDescription, ImageID) VALUES
-    (1,"Cybersécurité","Empechez les hackers de nuire","Cette branche de l'informatique comporte plusieurs domaines, de la sécurité de l'information à la sécurité des systèmes, en passant par la sécurité offensive (les hackers ne sont pas tous mal intentionnés)",1),
+    (1,"Cybersécurité","Empechez les hackers de nuire","Cette branche de l'informatique comporte plusieurs domaines, de la sécurité de l'information à la sécurité des systèmes, en passant par la sécurité offensive (les hackers ne sont pas tous mal intentionnés)",3),
     (2,"Développement","Créez des applications","Le développement est vaste. Les principaux domaines sont le développement web (vous voyez cette page internet? quelqu'un l'a codée), le développement d'applications (comme des jeux vidéo par exemple) et le DevOps",1),
-    (3,"IA","Créez le prochain SkyNet","Cette branche de l'informatique est en constante révolution et contribue à des avancées en matière médicale, en embarqué pour des robots autonomes, ou encore avec les IA génératives.",1),
+    (3,"IA","Créez le prochain SkyNet","Cette branche de l'informatique est en constante révolution et contribue à des avancées en matière médicale, en embarqué pour des robots autonomes, ou encore avec les IA génératives.",5),
     (4,"Infrastructure","Parce que l'internet a besoin de câbles, beaucoup de câbles","Pour se connecter à un serveur, il faut qu'il soit configuré, il faut s'occuper de sécuriser des connexions, faire du load balancing, et autres choses qu'il faudra maintenir à disposition des utilisateurs",1),
-    (5,"Robotique/IoT","Ta montre? connectée.\nTon frigo? connecté.\nTon roomba?\n...connecté","L'IoT rassemble tout objet connecté, de la voiture autonome au petit robot aspirateur. Leurs capteurs leur permettent de décider de leur comportement.",1);
+    (5,"Robotique/IoT","Ta montre? connectée.\nTon frigo? connecté.\nTon roomba?\n...connecté","L'IoT rassemble tout objet connecté, de la voiture autonome au petit robot aspirateur. Leurs capteurs leur permettent de décider de leur comportement.",4);
 ALTER TABLE Filiere AUTO_INCREMENT = 6;
 
 INSERT INTO Entreprises (EntreprisesID, EntrepriseNom, ImageID, FiliereID) VALUES 
