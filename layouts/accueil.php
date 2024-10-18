@@ -9,10 +9,7 @@
         <p class="test-desc">Faites votre test d'orientation pour savoir laquelle de ces branches de l'informatique pourrait vous correspondre</p>
         
         
-        <a href = "quizz.php"><button type = 'submit' class = 'btn'>Faites Votre Test !</button></a>
-        <?php $url = "accueil.php"; ?>
-        click here</button>
-    
+        <a href = "quizz.php"><button type = 'submit' class = 'test-button'>Faites Votre Test !</button></a>    
     </div>
     <!-- affichage compte -->
     <div>
