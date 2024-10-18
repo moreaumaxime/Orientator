@@ -9,12 +9,12 @@ try {
 }
 
 // // Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['utilisateurId'])) {
+if (!isset($_SESSION['UtilisateurID'])) {
     die('Erreur 401 : Vous devez être connecté pour accéder à cette page.');
 }
 
 // Récupérer l'ID de l'utilisateur connecté
-$utilisateurId = $_SESSION['utilisateurId'];
+$utilisateurId = $_SESSION['UtilisateurID'];
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         VALUES (:UtilisateurID, :cybersecurite, :developpement, :IA, :infrastructure, :robotique)
     ");
     $stmt->execute([
-        'UtilisateurID' => 1,
+        'UtilisateurID' => $utilisateurId,
         'cybersecurite' => $scores['cybersecurite'],
         'developpement' => $scores['developpement'],
         'IA' => $scores['IA'],
