@@ -14,6 +14,7 @@ catch (Exception $e) {
       if(!empty($_POST['UtilisateurHash']) and !empty($_POST['UtilisateurEmail']) ){
             $UtilisateurHash=htmlspecialchars($_POST['UtilisateurHash']);
             $email=htmlspecialchars($_POST['UtilisateurEmail']);
+            $utilisateurId=htmlspecialchars($_POST['UtilisateurID']);
             $select= $con -> prepare(" SELECT * FROM Utilisateur WHERE UtilisateurUtilisateurEmail= ? and  UtilisateurHash= ?" );
             $select -> execute([$email,$UtilisateurHash]);
             //On vérifie la forme maintenant
@@ -30,6 +31,7 @@ catch (Exception $e) {
 
                 $_SESSION['UtilisateurHash'] = $UtilisateurHash;
                 $_SESSION['UtilisateurEmail'] = $email;
+                $_SESSION['UtilisateurID'] = $utilisateurId;
 
                 header("Location: ../index.php");
                 
