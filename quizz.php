@@ -8,13 +8,14 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 
+
 // // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['UtilisateurID'])) {
     die('Erreur 401 : Vous devez être connecté pour accéder à cette page.');
 }
-
 // Récupérer l'ID de l'utilisateur connecté
-$utilisateurId = $_SESSION['UtilisateurID'];
+$utilisateurId =  $db->prepare("SELECT * FROM `utilisateur` ORDER BY `utilisateur`.`UtilisateurID` ASC") ;
+
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

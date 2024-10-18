@@ -8,6 +8,7 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 
+
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['UtilisateurID'])) {
     die('Erreur 401 :  Vous devez être connecté pour accéder à cette page.');
@@ -15,7 +16,6 @@ if (!isset($_SESSION['UtilisateurID'])) {
 
 // Récupérer l'ID de l'utilisateur connecté
 $utilisateurId = $_SESSION['UtilisateurID'];
-
 // Récupérer les derniers résultats de l'utilisateur depuis la base de données
 $stmt = $db->prepare("
     SELECT * FROM Resultats WHERE UtilisateurID = :UtilisateurID ORDER BY id DESC LIMIT 1
