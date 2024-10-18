@@ -61,7 +61,6 @@ catch (Exception $e) {
              $query->execute();
              //Et on définit les variables de sessions
                  $_SESSION['UtilisateurEmail'] = $UtilisateurEmail;
-                 $_SESSION['UtilisateurHash'] = $UtilisateurHash;
                  $query->CloseCursor();
 
                  header("Location: ../layouts/connexion.html");

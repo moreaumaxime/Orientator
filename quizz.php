@@ -10,11 +10,11 @@ try {
 
 
 // // Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['UtilisateurID'])) {
+if (!isset($_POST['UtilisateurID'])) {
     die('Erreur 401 : Vous devez être connecté pour accéder à cette page.');
 }
 // Récupérer l'ID de l'utilisateur connecté
-$utilisateurId =  $_SESSION['UtilisateurID']; // Récupérer l'ID de l'utilisateur connecté
+$utilisateurId =  $_POST['UtilisateurID']; // Récupérer l'ID de l'utilisateur connecté
 
 
 // Vérifier si le formulaire est soumis
