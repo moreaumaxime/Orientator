@@ -13,7 +13,9 @@ function getBranches(){
         die('Erreur : ' . $e->getMessage());
     }
     $stmt = $db->query("
-        SELECT filiereId, filiereNom, filiereDescription, filiereSlogan, ImageID FROM Filiere;
+       SELECT f.filiereId, f.filiereNom, f.filiereDescription, f.filiereSlogan, i.ImageEmplacement 
+        FROM Filiere f
+        LEFT JOIN Images i ON f.ImageID = i.ImageID
     ");
 
     $branches = $stmt->fetchAll();
@@ -34,9 +36,9 @@ function getBranche($id){
         WHERE filiereID = ?;
     ");
 
-    $branches = $stmt->fetchAll([$id]);
+    $branche = $stmt->fetchAll([$id]);
 
-    return $branches;
+    return $branche;
 }
 
 
