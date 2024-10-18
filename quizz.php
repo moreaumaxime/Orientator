@@ -9,12 +9,12 @@ try {
 }
 
 // // Vérifier si l'utilisateur est connecté
-// if (!isset($_SESSION['utilisateurId'])) {
-//     die('Vous devez être connecté pour accéder à cette page.');
-// }
+if (!isset($_SESSION['utilisateurId'])) {
+    die('Erreur 401 : Vous devez être connecté pour accéder à cette page.');
+}
 
 // Récupérer l'ID de l'utilisateur connecté
-// $utilisateurId = $_SESSION['utilisateurId'];
+$utilisateurId = $_SESSION['utilisateurId'];
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </head>
     <body>
     <div class='container'>
-        <h2>Résultats du Quiz</h2>";
+        <h2>Résultats du Quizz</h2>";
 
     if (reset($topMetiers) == 100) {
         // Si un score est de 100%, l'afficher seul

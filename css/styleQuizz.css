@@ -4,7 +4,7 @@ body {
     background-color: #97acf8; 
     margin: 0;
     padding: 0;
-    color: #fff; 
+    color: #000000; 
 }
 
 .container {
@@ -103,8 +103,11 @@ button[type = "submit"]:hover {
     padding: 8px 0;
 }
 p{
-    
+    color: #00060b;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
+    margin-bottom: 80px ;
 }
 
 

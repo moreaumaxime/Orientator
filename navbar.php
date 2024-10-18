@@ -37,17 +37,18 @@
             </li>
             <li class="li-nav">
                 <?php
-                $url = "accueil.php";
+                $url = "quizz.php";
+                echo '<a href="' . $url . '"style="text-decoration: none; color: inherit;">Questionnaire</a>';
                 ?>
-                <a style="text-decoration: none; color: inherit;">Questionnaire</a>
+                
                 <i class="fab fa-quora" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
                 <?php
-                $url = "index.php";
+                $url = "resultats.php";
+                echo '<a href="' . $url . '"style="text-decoration: none; color: inherit;">Resultats</a>';
                 ?>
-                <a style="text-decoration: none; color: inherit;">Résultat</a>
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
