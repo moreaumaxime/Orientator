@@ -35,7 +35,7 @@ catch (Exception $e) {
             $query->execute();
             $UtilisateurEmail_free=($query->fetchColumn()==0)?1:0;
             $query->CloseCursor();
-            if($UtilisateurEmail_free)
+            if(!$UtilisateurEmail_free)
             {
                 $UtilisateurEmail_erreur2 = "Votre adresse email est déjà utilisée par un membre";
                 $i++;
