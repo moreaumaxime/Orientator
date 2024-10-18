@@ -14,24 +14,14 @@ catch (Exception $e) {
       if(!empty($_POST['UtilisateurHash']) and !empty($_POST['UtilisateurEmail']) ){
             $UtilisateurHash=htmlspecialchars($_POST['UtilisateurHash']);
             $email=htmlspecialchars($_POST['UtilisateurEmail']);
-            $utilisateurId=htmlspecialchars($_POST['UtilisateurID']);
             $select= $con -> prepare(" SELECT * FROM Utilisateur WHERE UtilisateurUtilisateurEmail= ? and  UtilisateurHash= ?" );
             $select -> execute([$email,$UtilisateurHash]);
-            //On vérifie la forme maintenant
             
-            if (!preg_match("#^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$#", $email) || empty($email))
-            {
-               // $email_erreur2 = "Votre adresse E-Mail n'a pas un format valide";
-                //$i++;
-                echo 'Votre adresse E-Mail est au format invalide.';
-            }  
-
             if($select -> rowcount()>0){
             
 
                 $_SESSION['UtilisateurHash'] = $UtilisateurHash;
                 $_SESSION['UtilisateurEmail'] = $email;
-                $_SESSION['UtilisateurID'] = $utilisateurId;
 
                 header("Location: ../index.php");
                 
