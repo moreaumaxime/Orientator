@@ -7,10 +7,12 @@
     <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- Fichiers javscript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    
 <div align="center">
     <h1 class="text-title">Orientator</h1>
     <nav>
@@ -37,15 +39,15 @@
                 <?php
                 $url = "accueil.php";
                 ?>
-                <a style="text-decoration: none; color: inherit;">Questionnaire</a>';
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <a style="text-decoration: none; color: inherit;">Questionnaire</a>
+                <i class="fab fa-quora" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
             <li class="li-nav">
                 <?php
                 $url = "index.php";
                 ?>
-                <a style="text-decoration: none; color: inherit;">Résultat</a>';
+                <a style="text-decoration: none; color: inherit;">Résultat</a>
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                 <div class="underline"></div>
             </li>
