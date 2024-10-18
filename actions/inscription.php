@@ -11,7 +11,7 @@ catch (Exception $e) {
 }
 
 //if(isset($POST['inscription'])){
-      if(!empty($_POST['UtilisateurEmail']) || !empty($_POST['UtilisateurUsername'])|| !empty($_POST['UtilisateurHash']) || !empty($_POST['confirmpass'])){
+        if(!empty($_POST['UtilisateurEmail']) || !empty($_POST['UtilisateurUsername'])|| !empty($_POST['UtilisateurHash']) || !empty($_POST['confirmpass'])){
             $UtilisateurEmail_erreur1 = '';
             $UtilisateurEmail_erreur2 = '';
             $mdp_erreur = '';        
@@ -53,19 +53,23 @@ catch (Exception $e) {
              echo'<h1>Inscription terminée</h1>';
              echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['UtilisateurUsername'])).' vous êtes maintenant inscrit sur le forum</p>';
              
+             //methode de hachage du mot de passe
+             $UtilisateurHashcode= hash('sha256',$UtilisateurHash);
+
+             //à présent nous insérons le mot de passe haché
             $query=$bdd->prepare('INSERT INTO utilisateur (UtilisateurEmail, UtilisateurHash, UtilisateurUsername)
             VALUES (:UtilisateurEmail, :UtilisateurHash, :UtilisateurUsername)');
              $query->bindValue(':UtilisateurEmail', $UtilisateurEmail, PDO::PARAM_STR);
-             $query->bindValue(':UtilisateurHash', $UtilisateurHash, PDO::PARAM_STR);
+             $query->bindValue(':UtilisateurHash', $UtilisateurHashcode, PDO::PARAM_STR);
              $query->bindValue(':UtilisateurUsername', $UtilisateurUsername, PDO::PARAM_STR);
              $query->execute();
              //Et on définit les variables de sessions
                  $_SESSION['UtilisateurEmail'] = $UtilisateurEmail;
                  $query->CloseCursor();
 
-                 header("Location: ../layouts/connexion.html");
-                
-                 //$_SESSION['level'] = 2;
+                 header("Location: ../index.php?page=connexion");
+                 
+                //$_SESSION['level'] = 2;
              }
              else
              {

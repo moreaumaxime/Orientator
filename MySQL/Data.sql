@@ -84,9 +84,9 @@ CREATE TABLE ImagesArticleFiliere(
 
 INSERT INTO Images (ImageID, ImageEmplacement) VALUES 
     (1,"OrientatorLogo.png"),
-    (2,"bg.png");
-    (3,"Images/bannerSecu.jpg");
-    (4,"Images/bannerIoT.png");
+    (2,"bg.png"),
+    (3,"Images/bannerSecu.jpg"),
+    (4,"Images/bannerIoT.png"),
     (5,"Images/bannerIA.png");
 
 ALTER TABLE Images AUTO_INCREMENT = 3;
