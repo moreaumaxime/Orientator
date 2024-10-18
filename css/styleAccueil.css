@@ -1,0 +1,17 @@
+.branche{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 200px;
+}
+
+.branche-description{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ligne-1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: 200px;
+}
