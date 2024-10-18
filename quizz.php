@@ -1,4 +1,5 @@
 <?php
+session_start(); // Démarrer la session
 
 // Connexion à la base de données
 try {
@@ -6,6 +7,14 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
+
+// // Vérifier si l'utilisateur est connecté
+// if (!isset($_SESSION['utilisateurId'])) {
+//     die('Vous devez être connecté pour accéder à cette page.');
+// }
+
+// Récupérer l'ID de l'utilisateur connecté
+$utilisateurId = $_SESSION['utilisateurId'];
 
 // Vérifier si le formulaire est soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -54,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         VALUES (:UtilisateurID, :cybersecurite, :developpement, :IA, :infrastructure, :robotique)
     ");
     $stmt->execute([
-        'UtilisateurID' => 1,  // Remplacez par l'ID de l'utilisateur connecté
+        'UtilisateurID' => $utilisateurId,
         'cybersecurite' => $scores['cybersecurite'],
         'developpement' => $scores['developpement'],
         'IA' => $scores['IA'],
@@ -62,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'robotique' => $scores['robotique'],
     ]);
 
-    
+    // Afficher les résultats
     echo "<!DOCTYPE html>
     <html lang='fr'>
     <head>
