@@ -62,8 +62,10 @@ catch (Exception $e) {
              //Et on définit les variables de sessions
                  $_SESSION['UtilisateurEmail'] = $UtilisateurEmail;
                  $_SESSION['UtilisateurHash'] = $UtilisateurHash;
-                 //$_SESSION['level'] = 2;
                  $query->CloseCursor();
+                 header("Location: /connexion.html");
+                die();
+                 //$_SESSION['level'] = 2;
              }
              else
              {
