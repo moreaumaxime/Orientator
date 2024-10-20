@@ -63,12 +63,14 @@ catch (Exception $e) {
              $query->bindValue(':UtilisateurHash', $UtilisateurHashcode, PDO::PARAM_STR);
              $query->bindValue(':UtilisateurUsername', $UtilisateurUsername, PDO::PARAM_STR);
              $query->execute();
+             $query->CloseCursor();
              //Et on définit les variables de sessions
-                 $_SESSION['UtilisateurEmail'] = $UtilisateurEmail;
-                 $query->CloseCursor();
+                 $POST_['userID']= $result['UtilisateurID'];
+
+                 
 
                  header("Location: ../index.php?page=connexion");
-                 
+                 die()
                 //$_SESSION['level'] = 2;
              }
              else

@@ -28,12 +28,8 @@ catch (Exception $e) {
             if($select -> rowcount()>0){
                 
                 // identifiant de l'utilisateur connecte
-                $conID= $result['UtilisateurID'];
+                $POST_['userID']= $result['UtilisateurID'];
             
-
-                $_SESSION['UtilisateurHash'] = $UtilisateurHashcode;
-                $_SESSION['UtilisateurEmail'] = $UtilisateurEmail;
-
                 header("Location: ../index.php");
             
             }else {
