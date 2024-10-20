@@ -1,6 +1,7 @@
 
 
 <?php require_once("header.php")?>
+<?php require_once("controllers/controllerAccueil.php")?>
 
 <!-- premiere ligne de contenu -->
 <div class="ligne-1">
@@ -13,30 +14,38 @@
     </div>
     <!-- affichage compte -->
     <div>
-        <?= $loginCard ?>
+        
     </div>
 </div>
 
 <!-- lignes pour chaque branche -->
+
+
+
+
 <div>
-    <?php foreach($branches as list($id,$nom,$desc,$slogan,$img)) {
-    ?>
-        <div class="branche" style>
-            <div style="background-image: url('<?= $img ?>');">
-                <h1><?= $nom ?></h1>
+    <?php $branches = getBranches(); ?>
+
+
+    <?php foreach($branches as list($id,$nom,$desc,$slogan,$img)) {  ?>
+
+        <div class="branche" style="background-image: url('<?= $img ?>');">
+            <div>
+                <h2 class="branche-nom"><?= $nom ?></h3>
             </div>
-            <p class=branche-description>
-                <?= $slogan ?>
-            </p>
+            <div>
+                <h3 class=branche-slogan><?= $slogan ?></h3>
+            </div>
         </div>
 
-    <?php
-    }
-    ?>
+    <?php } ?>
+
+
+
 </div>
 
 
-<?php require("footer.php") ?>
+<?php require_once("footer.php") ?>
 
 </body>
 </html>

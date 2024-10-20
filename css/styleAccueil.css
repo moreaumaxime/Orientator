@@ -1,15 +1,3 @@
-.branche{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    min-height: 200px;
-}
-
-.branche-description{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 .ligne-1{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -18,5 +6,31 @@
 .test-desc{
     text-align: center;
     font-weight: bold;
+}
 
+
+/* style des branches */
+.branche{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.branche div *{
+    color: white;
+    text-align: center;
+}
+
+.branche-slogan{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.branche-nom{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }

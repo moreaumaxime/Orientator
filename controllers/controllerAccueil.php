@@ -29,14 +29,16 @@ function getBranche($id){
         die('Erreur : ' . $e->getMessage());
     }
     
-    $stmt = $db->query("
+    $stmt = $db->prepare("
         SELECT f.filiereId, f.filiereNom, f.filiereDescription, f.filiereSlogan, i.ImageEmplacement 
         FROM Filiere f
         LEFT JOIN Images i ON f.ImageID = i.ImageID
-        WHERE filiereID = ?;
+        WHERE filiereID = :id;
     ");
 
-    $branche = $stmt->fetchAll([$id]);
+    $stmt->execute(['id' => $id]); 
+
+    $branche = $stmt->fetchAll();
 
     return $branche;
 }
@@ -48,11 +50,6 @@ function accueil(){
     $stylesheets = ["css/styles.css","css/styleAccueil.css"];
     $scripts = [];
 
-
-    // a recuperer dans la bdd
-    $branches = getBranches();
-    $buttonlink = "";
-    $loginCard="";
 
     include("layouts/accueil.php");
 }
