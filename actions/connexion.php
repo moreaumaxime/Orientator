@@ -1,47 +1,43 @@
-
 <?php
+session_start(); // Démarrer la session
+
 try {
-      $bdd = new PDO('mysql:host=localhost;dbname=Orientator', 'root', '');
-      $bdd->setAttribute(PDO::ATTR_ERRMODE /*rapport d'erreues*/, PDO::ERRMODE_EXCEPTION/*emet une exception*/);
-
-      // echo "vous etes bien connecte";
-}
-catch (Exception $e) {
-      die('Erreur : erreur de connexion' . $e->getMessage());
+    $bdd = new PDO('mysql:host=localhost;dbname=Orientator', 'root', '');
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (Exception $e) {
+    die('Erreur : erreur de connexion ' . $e->getMessage());
 }
 
-//if(isset($POST['connexion'])){
-        if(!empty($_POST['UtilisateurHash']) and !empty($_POST['UtilisateurEmail']) ){
-            $UtilisateurHash=htmlspecialchars($_POST['UtilisateurHash']);
-            $UtilisateurEmail=htmlspecialchars($_POST['UtilisateurEmail']);
+// Vérifier si le formulaire est soumis
+if (isset($_POST['connexion'])) {
+    // Vérifier que les champs ne sont pas vides
+    if (!empty($_POST['UtilisateurHash']) && !empty($_POST['UtilisateurEmail'])) {
+        $UtilisateurHash = htmlspecialchars($_POST['UtilisateurHash']);
+        $UtilisateurEmail = htmlspecialchars($_POST['UtilisateurEmail']);
 
-            //methode de hachage du mot de passe
-            $UtilisateurHashcode= hash('sha256',$UtilisateurHash);
+        // Méthode de hachage du mot de passe
+        $UtilisateurHashcode = hash('sha256', $UtilisateurHash);
 
-            //à présent nous comparons le mot de passe haché avec les mots de passe de la base de donnée
-            $select= $bdd -> prepare(" SELECT * FROM Utilisateur WHERE UtilisateurEmail= ? and  UtilisateurHash= ?" );
-            $select -> execute([$UtilisateurEmail,$UtilisateurHashcode]);
-            
-            // Récupérer le résultat
-            $result = $select->fetch(PDO::FETCH_ASSOC);
+        // Comparer le mot de passe haché avec les mots de passe de la base de données
+        $select = $bdd->prepare("SELECT * FROM Utilisateur WHERE UtilisateurEmail = ? AND UtilisateurHash = ?");
+        $select->execute([$UtilisateurEmail, $UtilisateurHashcode]);
 
-            if($select -> rowcount()>0){
-                
-                // identifiant de l'utilisateur connecte
-                $POST_['userID']= $result['UtilisateurID'];
-            
-                header("Location: ../index.php");
-            
-            }else {
-                echo " Adresse Email ou mot de passe incorrect. ";
-            }
-        }else {
-            echo "tous les champs doivent être remplis.";
+        // Récupérer le résultat
+        $result = $select->fetch(PDO::FETCH_ASSOC);
+
+        // Vérifier si l'utilisateur existe
+        if ($select->rowCount() > 0) {
+            // Définir l'identifiant de l'utilisateur dans la session
+            $_SESSION['UtilisateurID'] = $result['UtilisateurID'];
+
+            // Redirection vers la page d'accueil
+            header("Location: ../index.php");
+            exit(); // Assurez-vous d'arrêter l'exécution du script après la redirection
+        } else {
+            echo "Adresse email ou mot de passe incorrect.";
         }
-//}
-
-
+    } else {
+        echo "Tous les champs doivent être remplis.";
+    }
+}
 ?>
-
-
-

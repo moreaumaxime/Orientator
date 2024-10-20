@@ -8,18 +8,20 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 
-
 // Vérifier si l'utilisateur est connecté
-if (!isset($_POST['UtilisateurID'])) {
-    die('Erreur 401 :  Vous devez être connecté pour accéder à cette page.');
+if (!isset($_SESSION['UtilisateurID'])) {
+    http_response_code(401);
+    die('Erreur 401 : Vous devez être connecté pour accéder à cette page.');
 }
 
-// Récupérer l'ID de l'utilisateur connecté
-$utilisateurId = $_POST['UtilisateurID'];
+// Récupérer l'ID de l'utilisateur depuis la session
+$utilisateurId = $_SESSION['UtilisateurID'];
+
 // Récupérer les derniers résultats de l'utilisateur depuis la base de données
 $stmt = $db->prepare("
-    SELECT * FROM Resultats WHERE UtilisateurID = :UtilisateurID ORDER BY id DESC LIMIT 1
+    SELECT * FROM Resultats WHERE UtilisateurID = :UtilisateurID ORDER BY ResultatsID DESC LIMIT 1
 ");
+
 $stmt->execute(['UtilisateurID' => $utilisateurId]);
 $resultat = $stmt->fetch(PDO::FETCH_ASSOC);
 

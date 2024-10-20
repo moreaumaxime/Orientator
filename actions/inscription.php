@@ -70,7 +70,7 @@ catch (Exception $e) {
                  
 
                  header("Location: ../index.php?page=connexion");
-                 die()
+                 die();
                 //$_SESSION['level'] = 2;
              }
              else
