@@ -13,7 +13,7 @@
 .branche{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 500px;
+    min-height: 400px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
