@@ -8,17 +8,6 @@
     font-weight: bold;
 }
 
-/* style de la section user */
-
-.user-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.user-buttons{
-    display: block;
-    margin: auto;
-    border-top: 25px;
-}
 
 /* style des branches */
 .branche{

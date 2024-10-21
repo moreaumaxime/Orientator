@@ -65,7 +65,7 @@ catch (Exception $e) {
              $query->execute();
              $query->CloseCursor();
              //Et on définit les variables de sessions
-                 $_SESSION['userID']= $result['UtilisateurID'];
+                 $POST_['userID']= $result['UtilisateurID'];
 
                  
                  header("Location: ../index.php?page=connexion");

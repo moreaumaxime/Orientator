@@ -15,14 +15,39 @@
 
 
     <!-- affichage compte -->
-    <div class='user-section'>
-        <div>
-            <img src="Images/logo_utilisateur.png" />
-        </div>
-        <div>
-            <a class="user-buttons" href = "index.php?page=connexion">  <button type = 'submit' class = 'connexion-button'>Connexion</button></a>
-            <a class="user-buttons" href = "quizz.php?page=inscription"><button type = 'submit' class = 'inscription-button'>Inscription</button></a>
-        </div>
+    <div>
+        <?php session_start(); // Démarrage de la session
+        // Vérification si l'utilisateur est connecté
+        if(isset($_SESSION['UtilisateurID'])) { 
+
+            $UtilisateurID = $_SESSION['UtilisateurID'];
+
+            try {
+                $bdd = new PDO('mysql:host=localhost;dbname=Orientator', 'root', '');
+                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (Exception $e) {
+                die('Erreur : erreur de connexion ' . $e->getMessage());
+            }
+
+            $select = $bdd->prepare("SELECT UtilisateurUsername FROM Utilisateur WHERE UtilisateurID = ? ");
+            $select->execute([$UtilisateurID]);
+
+            // Récupérer le résultat
+            $result = $select->fetch(PDO::FETCH_ASSOC);
+
+            $UtilisateurUsername = $result['UtilisateurUsername'];
+
+        ?>
+            <p><i>Bienvenue sur notre forum,</i> <h2> <u><strong> <?= htmlspecialchars($UtilisateurUsername); ?> </strong></u> </h2> </p>
+
+           <h3> <a href="layouts/logout.php">Déconnexion</a> </h3>
+        <?php 
+        } else { 
+        ?>
+            <h3><a href="index.php?page=connexion">Se connecter</a></h3>
+        <?php 
+        } 
+        ?>
     </div>
 </div>
 
