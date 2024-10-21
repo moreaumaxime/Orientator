@@ -38,13 +38,13 @@
             $UtilisateurUsername = $result['UtilisateurUsername'];
 
         ?>
-            <p><i>Bienvenue sur notre forum,</i> <h2> <u><strong> <?= htmlspecialchars($UtilisateurUsername); ?> </strong></u> </h2> </p>
+            <p><h2><u><strong> <?= htmlspecialchars($UtilisateurUsername); ?> </strong></u></h2></p>
 
-           <h3> <a href="layouts/logout.php">Déconnexion</a> </h3>
+            <h3> <a href="layouts/logout.php"><button class="boutons-conn">Déconnexion</button></a> </h3>
         <?php 
         } else { 
         ?>
-            <h3><a href="index.php?page=connexion">Se connecter</a></h3>
+            <h3><a href="index.php?page=connexion"><button class="boutons-conn">Connexion</button></a></h3>
         <?php 
         } 
         ?>

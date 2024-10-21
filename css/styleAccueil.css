@@ -6,8 +6,13 @@
 .test-desc{
     text-align: center;
     font-weight: bold;
+    margin-top: 35px;
 }
-
+.test-button{
+    margin-top: 35px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
 
 /* style des branches */
 .branche{
@@ -34,3 +39,5 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+
