@@ -68,7 +68,6 @@ catch (Exception $e) {
                  $POST_['userID']= $result['UtilisateurID'];
 
                  
-
                  header("Location: ../index.php?page=connexion");
                  die();
                 //$_SESSION['level'] = 2;

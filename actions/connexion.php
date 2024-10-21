@@ -30,6 +30,8 @@ if (isset($_POST['connexion'])) {
             // Définir l'identifiant de l'utilisateur dans la session
             $_SESSION['UtilisateurID'] = $result['UtilisateurID'];
 
+           
+
             // Redirection vers la page d'accueil
             header("Location: ../index.php");
             exit(); // Assurez-vous d'arrêter l'exécution du script après la redirection
