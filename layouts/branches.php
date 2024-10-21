@@ -27,9 +27,9 @@
                 </div>
                 <div class="col-sm-6">
                     <h2 class="text-title2">Entreprises :</h2>
-                    <ul>';
+                    <ul class="text">';
                     if ($filiere['EntrepriseNom']) {
-                        echo '<li><strong>' . htmlspecialchars($filiere['EntrepriseNom']) . ':</strong> ' . htmlspecialchars($filiere['EntrepriseDescription']) . '</li>';
+                        echo '<li><strong>' . htmlspecialchars($filiere['EntrepriseNom']) . '</li>';
                     } else {
                         echo '<li>Aucune entreprise disponible.</li>';
                     }
@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h2 class="text-title2">Formations :</h2>
-                    <ul>';
+                    <ul class="text">';
                     if ($filiere['FormationNom']) {
                         echo '<li><strong>' . htmlspecialchars($filiere['FormationNom']) . ':</strong> ' . htmlspecialchars($filiere['FormationDescription']) . '</li>';
                     } else {
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-sm-6">
                     <h2 class="text-title2">Emplois :</h2>
-                    <ul>';
+                    <ul class="text">';
                     if ($filiere['EmploiNom']) {
                         echo '<li><strong>' . htmlspecialchars($filiere['EmploiNom']) . ':</strong> ' . htmlspecialchars($filiere['EmploiDescription']) . '</li>';
                     } else {
