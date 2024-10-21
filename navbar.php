@@ -27,10 +27,10 @@
             </li> 
                 <?php  
                 $branches = [
-                    ['id' => 1, 'nom' => 'Cybersécurité', 'fa' => 'fa fa-shield'],
-                    ['id' => 2, 'nom' => 'Développement', 'fa' => 'fa fa-desktop'],
+                    ['id' => 1, 'nom' => 'Cybersécurité', 'fa' => 'fas fa-shield'],
+                    ['id' => 2, 'nom' => 'Développement', 'fa' => 'fas fa-desktop'],
                     ['id' => 3, 'nom' => 'IA', 'fa' => 'fas fa-brain'],
-                    ['id' => 4, 'nom' => 'Infrastructure', 'fa' => 'fa fa-building'],
+                    ['id' => 4, 'nom' => 'Infrastructure', 'fa' => 'fas fa-building'],
                     ['id' => 5, 'nom' => 'Robotique/IoT', 'fa' => 'fas fa-robot'],
                 ];
                 foreach ($branches as $branch) {
