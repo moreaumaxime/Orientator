@@ -43,6 +43,27 @@ function getBranche($id){
     return $branche;
 }
 
+function getUser($id){
+    try {
+        $db = new PDO('mysql:host=localhost;dbname=orientator;charset=utf8', 'root', '');
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    
+    $stmt = $db->prepare("
+        SELECT  u.UtilisateurID, u.UtilisateurUsername, u.UtilisateurEmail
+        FROM Utilisateur u
+        WHERE u.UtilisateurID = :id
+        LIMIT 1;
+    ");
+
+    $stmt->execute(['id' => $id]); 
+
+    $user = $stmt->fetch();
+
+    return $user;
+}
+
 
 
 function accueil(){
@@ -53,5 +74,3 @@ function accueil(){
 
     include("layouts/accueil.php");
 }
-
-?>

@@ -13,8 +13,14 @@
         <a href = "quizz.php"><button type = 'submit' class = 'test-button'>Faites Votre Test !</button></a>    
     </div>
     <!-- affichage compte -->
-    <div>
-        
+    <div class='user-section'>
+        <div>
+            <img src="Images/logo_utilisateur.png" />
+        </div>
+        <div>
+            <a class="user-buttons" href = "index.php?page=connexion">  <button type = 'submit' class = 'connexion-button'>Connexion</button></a>
+            <a class="user-buttons" href = "quizz.php?page=inscription"><button type = 'submit' class = 'inscription-button'>Inscription</button></a>
+        </div>
     </div>
 </div>
 

@@ -65,7 +65,7 @@ catch (Exception $e) {
              $query->execute();
              $query->CloseCursor();
              //Et on définit les variables de sessions
-                 $POST_['userID']= $result['UtilisateurID'];
+                 $_SESSION['userID']= $result['UtilisateurID'];
 
                  
 
